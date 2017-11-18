@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Angular JS- Hello World</title>
+<!-- Default css ---->    
+<link rel="stylesheet" type="text/css" href="css/default.css"> 
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="mainCtrl">
+         <input type="text" ng-model="yourName" placeholder="Entter your name">
+         <p> Hello {{yourName}}, welcome to Angular World!</p>
+         <p>Access variable stored on $scope: {{contacts[0].firstName}}
+         </p>
+    </div>
+      
+  <script src="lib/angular.min.js"></script>
+    <script type="text/javascript">
+      angular.module("myApp", []).controller('mainCtrl', ['$scope', function($scope){
+          $scope.contacts = [{ firstName: 'Chandra',
+                             contactEmail: 'chandra@gmail.com'
+                            }, {
+                              firstName: 'Jay',
+                              contactEmail: 'jay@gmail.com'
+                            },{
+                               firstName: 'Chaitanya',
+                               contactEmail: 'chaitanya@gmail.com'
+                                }];
+          
+            $scope.addContact = function(obj){
+               $scope.contacts.push(obj);
+
+            };
+
+            $scope.name = 'red';
+
+            $scope.$watch('color', function(newVal, oldVal){
+                console.log('color', newVal, oldVal);
+            }, true);
+
+
+        }]);
+    </script>
+</body>
+</html>

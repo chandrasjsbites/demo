@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Angular JS- Hello World</title>
+<!-- Default css ---->    
+<link rel="stylesheet" type="text/css" href="css/default.css"> 
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body ng-app="myApp">
+    
+        <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                 <!-- input checkbox : directives ng-true-valueand ng-false-value --->
+                 <p>input checkbox seeting val with directives:ng-true-valueand,ng-false-value</p>
+                 <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="myCheckboxVal">
+                 <p>Checkbox value: {{myCheckboxVal}}</p>
+                    
+                                    
+                </div>
+            </div>
+            
+      <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                  <h1>Angular JS -ng-src</h1>
+                  
+                   <div>
+                       <p>I swear it wasn't me :P </p>
+                       <img ng-style="{'width': '100%'}" ng-src="kid-attacks-the-wrong-guy.gif" alt="funny image">
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+    
+ </div>
+    
+    
+  
+      
+  <script src="lib/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

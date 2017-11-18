@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Angular JS- Hello World</title>
+<!-- Default css ---->    
+<link rel="stylesheet" type="text/css" href="css/default.css">
+    <!--- Bootstrap min css --->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body ng-app="myApp" ng-controller="mainCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                  <h1>Angular JS -module loading</h1>
+                  
+                    Access PI value of common module.
+                    <p><strong>{{pi}}</strong></p>
+                    
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                  <h3>Angular JS -module sharing</h3>
+                
+                    <input type="text" ng-model="myStr">
+                    <p>Show only first three chars of i/p string : <strong>{{trimmedStr}}</strong></p>
+                    
+                </div>
+            </div>
+            
+        <!--    <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                  <h1>Angular JS -module loading</h1>
+                  
+                    Access PI value of common module.
+                    <p><strong>{{pi}}</strong></p>
+                    
+                </div>
+            </div> -->
+          </div>
+        </div>
+    
+ </div>
+    
+      
+  <script src="lib/angular.min.js"></script>
+  <!--<script src="lib/angular-route.min.js"></script>--->
+  <script src="app.js"></script>
+  <script src="common/common.js"></script>
+  <script src="js/main-controller.js"></script>
+</body>
+</html>
